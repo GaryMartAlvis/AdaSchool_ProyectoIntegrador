@@ -63,4 +63,3 @@ def read_key():
             print(f"Presionaste la tecla: {presseed_key}")
 
 read_key()
-
