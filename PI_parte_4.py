@@ -98,17 +98,13 @@ punto_final = (len(mapa)-1, len(mapa[0])-1)
 
 # Funcion que imprime el mapa en forma de matriz en la consola para visualizarlo
 def mapa_visual(mapa):
-  for fila in mapa:
-    print(''.join(fila))
+    clear_terminal()
+    for fila in mapa:
+        print(''.join(fila))
 
 # Funcion que limpia la pantalla de terminal
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-# Funcion para limpiar y cargar el mapa en la terminal (Compilacion de dos funciones)
-def imprimir_mapa_con_limpieza(mapa):
-    clear_terminal() # Llamado a la funcion limpieza de terminal
-    mapa_visual(mapa) # Imprimir mapa tipo matriz en terminal
 
 # Funcion main loop - Desarrollo del la parte 4 del proyecto.
 def main_loop(mapa: List[List[str]], punto_inicial: Tuple[int, int], punto_final: Tuple[int, int]):
@@ -118,7 +114,7 @@ def main_loop(mapa: List[List[str]], punto_inicial: Tuple[int, int], punto_final
     # Funcion para asignar en el mapa cargado la letra 'P' como punto de partida
     def mostrar_mapa():
         mapa[eje_x][eje_y] = 'P'
-        imprimir_mapa_con_limpieza(mapa)
+        mapa_visual(mapa)
 
     # Llamado de la funcion mostrar_mapa
     mostrar_mapa()
