@@ -79,6 +79,11 @@ laberinto = """..###################
     #.....#.....#.#.#.#.#
     ###################.."""
 
+print('Bienvenido al juego del laberinto.')
+name_user = input('Ingrese su nombre: ')
+print(f'{name_user} el juego esta por comensar, preparate.')
+name_user = input('Enter para comensar...')
+
 # Funcion que transforma una cadena en una matriz de caracteres con el punto de separacion dado segun el mapa
 def convertir_a_matriz(laberinto):
     # Dividir el laberinto en filas
@@ -149,3 +154,5 @@ def main_loop(mapa: List[List[str]], punto_inicial: Tuple[int, int], punto_final
 
 # Llama a la función principal con el mapa y los puntos iniciales y finales para inicializar el juego.
 main_loop(mapa, punto_inicial, punto_final)
+
+print(f'{name_user} felicidades por terminar el juego.')

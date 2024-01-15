@@ -20,21 +20,17 @@ Podrás moverte por el mapa usando las teclas ↑ ↓ ← → de tu teclado.
 #Trabajo con libreria, en las lineas inferiores se importan los recursos utilizados en esta seccion del proyecto
 import os
 import readchar
-from readchar import readkey, key
 
 #Funcion borrar terminal e imprimir el nuevo número
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-#Función bucle para contar 50 números
-print('Presiona la tecla "n" para incrementar el numero')
 
 #Contruccion de la funcion
 def manipulate_terminal():
     numbers = 0
 
     while numbers <= 50:
-        clear_terminal()
+        print('Presiona la tecla "n" para incrementar el numero')
         print(f'Numero actual: {numbers}')
         presseed_key = readchar.readkey()
 
@@ -42,6 +38,7 @@ def manipulate_terminal():
             numbers += 1
         else:
             break
+        clear_terminal()
 
 #Llamado a la funcion
 manipulate_terminal()
