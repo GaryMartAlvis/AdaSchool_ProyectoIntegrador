@@ -116,7 +116,7 @@ print(f'{name_user} el juego está por comenzar, prepárate.')
 input('Enter para comenzar...')
 
 # Instanciar el juego con mapas aleatorios
-path_a_mapas = 'mapas'
+path_a_mapas = os.path.join(os.path.dirname(__file__), 'mapas')
 juego_archivo = JuegoArchivo(path_a_mapas)
 
 # Ejecucion del juego
